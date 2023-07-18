@@ -1,0 +1,330 @@
+@import "./assets/css/variables";
+
+.heroVideoFluid{
+  padding-top:30px;
+  padding-bottom:30px;
+  height:650px;
+  overflow:hidden;
+  position: relative;
+
+  video{
+    object-fit: cover;
+    height:650px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .videoOverlay{
+    background: var(--gradient, linear-gradient(96deg, rgba(68, 0, 153, 0.88) 6.97%, rgba(217, 217, 217, 0.02) 100%));
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:100%;
+    z-index: 1;
+  }
+  .heroContent{
+    position: absolute;
+    z-index: 2;
+    color:$gray0;
+    margin-top:60px;
+    p{
+      font-size:18px;
+      font-weight:600;
+      margin-top:0px;
+      padding-left: 10px;
+      &:before{
+        position: absolute;
+        left:-200%;
+        content:"";
+        height:2px;
+        background-color: red;
+        width: 200%;
+        top: 8px;
+        animation: slideInLeft;
+        animation-duration: 500ms;
+      }
+      &:after{
+        content: '';
+        display: red;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        left:-10px;
+        animation: zoomIn;
+        animation-duration: 400ms;
+      }
+    }
+    h1{
+      font-size:60px;
+      max-width:250px;
+      margin:0px;
+      padding-left:10px;
+    }
+  }
+}
+
+.heroVideoContainer{
+  margin-top: -150px;
+  z-index: 3;
+  position: relative;
+  padding-bottom:15px;
+}
+
+.flightInfo{
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.05);
+  background-color: $gray0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  flex:1 1 auto;
+  padding:40px 32px;
+  h2{
+    margin:0px;
+    font-weight:400;
+    font-size:42px;
+    color:$gray100;
+  }
+  .allFlights{
+    display: table;
+    margin-left:0px;
+    margin-top:20px;
+    text-decoration: none;
+    font-weight:600;
+    color:$violet100;
+    span{
+      color:$sunrise100;
+      margin-left:8px;
+    }
+  }
+}
+
+
+
+
+
+/* Tabs */
+.tabFlight {
+  overflow: hidden;
+  margin-top:30px;
+  button {
+    background-color: transparent;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 19px;
+    margin-right:24px;
+    padding:0px 0px 5px 0px;
+    border-bottom:2px solid transparent;
+    color:$gray100;
+    font-weight:500;
+  }
+  button.active {
+    border-bottom:2px solid $sunrise100;
+    -webkit-text-stroke: 1px $gray100;
+    text-stroke: 4px $gray100;
+  }
+}
+.tabcontent {
+  display: none;
+  padding: 0px;
+  border-top: none;
+}
+
+
+/* Flight Forms */
+.heroVideoForm{
+  margin-top:25px;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  label{
+    display: block;
+    margin-bottom:5px;
+    width: 100%;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color:$gray100;
+  }
+  input{
+    display: inline-flex;
+    height: 52px;
+    padding:10px 16px;
+    border-radius: 0px;
+    flex: 3;
+    background-color: $snow40;
+    border:1px solid $snow80;
+    border-right:none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165%;
+    color:$gray100;
+  }
+  input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $gray100;
+    opacity: 1; /* Firefox */
+  }
+
+  input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $gray100;
+  }
+
+  input::-ms-input-placeholder { /* Microsoft Edge */
+    color: $gray100;
+  }
+  button{
+    background-color: $violet100;
+    color:$gray0;
+    padding:12px 24px;
+    box-shadow: none;
+    margin-top:0px;
+    border:none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .arrivalInput{
+    border-right:1px solid $snow80;
+  }
+  .label2{
+   margin-top:15px;
+  }
+}
+
+
+.gridTime{
+  margin:0px !important;
+}
+
+.waitTimes{
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.05);
+  background-color: $gray0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding:40px 32px;
+
+  .mainCTA{
+    display: table;
+    margin-left:auto;
+    margin-top:5px;
+  }
+  h2{
+    margin:0px;
+    font-weight:400;
+    font-size:42px;
+    color:$gray100;
+  }
+}
+
+
+.waitGrid{
+  padding: 0px 8px;
+  margin-top:20px !important;
+  margin-bottom:10px !important;
+  .col-grid{
+    padding:0px 6px;
+  }
+}
+
+.waitCard{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 10px 18px 10px;
+  border:2px solid $snow60;
+  h3{
+    color:$gray100;
+    margin:0px;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  .type{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165%;
+    margin:0px;
+  }
+  .time{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height:100%;
+    padding:10px 0px;
+    margin:0px;
+    position: relative;
+    span{
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      display: block;
+      padding-bottom:5px;
+      line-height:100%;
+    }
+    &:after{
+      height: 2px;
+      display: block;
+      width: 50px;
+      background: $lime100;
+      content: '';
+      left:0;
+      right:0;
+      margin:0px auto;
+    }
+  }
+  a{
+    color:$violet100;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 165%;
+    text-decoration: none;
+  }
+}
+
+.waitTimesCopy{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165%;
+  margin:0px;
+}
+
+.col-custom40{
+  width: 40%;
+  *width: 40%;
+  padding: 9px;
+}
+.col-custom60{
+  width: 60%;
+  *width: 60%;
+  padding: 9px;
+}
+
+@media screen and (max-width:991px){
+  .col-custom40{
+    width: 100%;
+    *width: 100%;
+  }
+  .col-custom60{
+    width: 100%;
+    *width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+/*!
+ * BeefUp v1.1.7 - A jQuery Accordion Plugin
+ * Copyright 2016 Sascha Künstler http://www.schaschaweb.de/
+ */
+
+/*!
+ * jQuery Cookie Plugin v1.4.1
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2006, 2014 Klaus Hartl
+ * Released under the MIT license
+ */
+
+/*!
+ * mmenu.js
+ * mmenujs.com
+ *
+ * Copyright (c) Fred Heusschen
+ * frebsite.nl
+ *
+ * License: CC-BY-NC-4.0
+ * http://creativecommons.org/licenses/by-nc/4.0/
+ */
+
+/*! Magnific Popup - v1.1.0 - 2016-02-20
+* http://dimsemenov.com/plugins/magnific-popup/
+* Copyright (c) 2016 Dmitry Semenov; */
+
+/*! jQuery v3.6.3 | (c) OpenJS Foundation and other contributors | jquery.org/license */

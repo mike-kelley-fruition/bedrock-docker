@@ -1,0 +1,192 @@
+@import "./assets/css/variables";
+
+.parkingFluid{
+  padding-top:100px;
+  padding-bottom:100px;
+  background-color: $violet100;
+  h2{
+    font-weight: 400;
+    line-height: 135%;
+    font-size: 42px;
+    color:$gray0;
+    margin:0px;
+  }
+}
+
+
+.btn-group-custom {
+  width: 400px;
+  height: 48px;
+  background: $gray0;
+  border-radius: 80px;
+  margin: 10px 0px 10px auto;
+  display: flex;
+  padding: 4px;
+  .customBtn{
+    font-size: 16px;
+    color:$gray100;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    height: 40px;
+    border-radius: 86.0282px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+    -webkit-appearance: none!important;
+    text-align: center;
+    color: $gray100;
+    cursor: pointer;
+    &.active {
+      background-color: $violet100;
+      color: $gray0;
+    }
+    &:hover {
+      background-color: $violet100;
+      color: $gray0;
+    }
+  }
+  #directions{
+    margin-left: 3px;
+  }
+}
+
+
+.parkingKey{
+  display: inline-block;
+  color:$gray0;
+  margin:0px 24px 0px 0px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  span{
+    background-color: $gray0;
+    width: 30px;
+    height:30px;
+    text-align: center;
+    padding-top:6px;
+    color:$violet100;
+    border-radius: 50%;
+    vertical-align: middle;
+    font-size:16px;
+    margin-right:8px;
+  }
+}
+
+.col-custom20{
+  width:20%;
+  *width: 20%;
+  padding:10px;
+}
+
+.parkingCard{
+  background:$gray0;
+  display: flex;
+  padding: 18px 24px 22px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  p{
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin-top:0px;
+    margin-bottom:16px;
+  }
+  .statusButton{
+    border-radius: 32px;
+    padding: 4px 16px;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 165%;
+    display: inline-block;
+    span{
+      margin-right: 4px;
+    }
+    &.open{
+      background-color: $lime100;
+      border:1px solid $lime100;
+    }
+    &.closed{
+      border:1px solid $sunrise100;
+    }
+    &.almost{
+      border:1px solid $warning;
+      background-color: $warning;
+    }
+    &.full{
+      border:1px solid $warning;
+      background-color: $warning;
+    }
+  }
+  .icon{
+    width:32px;
+    height:32px;
+    text-align: center;
+    padding-top:6px;
+    color:$gray100;
+    border: 1px solid $snow80;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left:4px;
+  }
+  .statusWrap{
+    display: block;
+  }
+}
+
+@media screen and (max-width:1199px){
+  .parkingCard{
+    .statusButton{
+      margin-bottom:8px;
+    }
+  }
+  .col-custom20 {
+    width: 25%;
+    *width: 25%;
+  }
+}
+
+
+@media screen and (max-width:991px){
+  .col-custom20 {
+    width: 33.3333%;
+    *width: 33.3333%;
+  }
+  .btn-group-custom{
+    margin:0px;
+  }
+}
+
+@media screen and (max-width:767px){
+  .col-custom20 {
+    width: 100%;
+    *width: 100%;
+  }
+  .parkingFluid{
+    padding-top:40px;
+    padding-bottom:40px;
+    h2{
+      font-size:30px;
+    }
+  }
+  .btn-group-custom{
+    width:100%;
+    .customBtn{
+      font-size: 11px;
+      line-height: 130%;
+    }
+  }
+  .parkingKey{
+    display: block;
+    margin:10px 0px;
+  }
+}
